@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="shortcut icon" href="Picture/hgb logo.jpg" type="image/x-icon">
+    <style>
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333;
+    background-image: url(Picture/background.jpg);
+}
+
+/* Container and Navbar */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #add8e6; /* Light blue navbar */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+
+.navbar h1 {
+    font-size: 1.8em;
+    color: #333;
+}
+.navbar img{
+    width: 50px;
+    height: 50px;
+
+}
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin: 0 15px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    color: #0066cc; /* Darker blue on hover */
+}
+
+.menu-icon img {
+    width: 30px;
+    cursor: pointer;
+}
+
+/* School Overview Section */
+.container2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container2 h2 {
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.container2 h2 span {
+    color: #0066cc; /* Darker blue for emphasis */
+}
+
+.container2 p {
+    font-size: 50px;
+    line-height: 1.5;
+    margin: 10px 0;
+    color: white;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #add8e6; /* Light blue background */
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.hamburger-menu ul {
+    list-style: none;
+}
+
+.hamburger-menu ul li {
+    margin: 15px 0;
+}
+
+.hamburger-menu ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.close-btn {
+    background-color: #ffcccb; /* Light red for exit button */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar nav ul {
+        display: none; /* Hide desktop nav on mobile */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger menu on mobile */
+    }
+
+    .container2 {
+        padding: 0 10px; /* Add padding on mobile */
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="Picture/hgb logo.jpg" class="image">
+            <h1>HGBaquiran College</h1>
+            <nav>
+                <ul>
+                    <li><a href="Main.html">HOME</a></li>
+                    <li><a href="AboutUs.html">ABOUT</a></li>
+                    <li><a href="Course.html">COURSES</a></li>
+                    <li><a href="Contact.html">CONTACT</a></li>
+                    
+                </ul>
+            </nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <img src="Picture/menu.png" alt="Menu Icon">
+            </div>
+        </div><br><br>
+        <div class="container2">
+            <h2 style="font-size: 50px; font-family: Georgia, 'Times New Roman', Times, serif;" >School<span> Overview</span></h2> <br><br>
+            <h2>
+             <span>Honorato Guzman Baquiran (HGB) College</span> is a private educational institution in Tumauini,Isabela.
+                 Since its foundation in 2005, the school provides quality education that builds graduates who are competent,
+                 active, and adaptive in navigating problems in both the local and global communities.</p><br>
+                 <p><span>HGBaquiran College </span>is recognized by the Commission on Higher Education (CHED) and the Department of Education (DepEd).
+                The school mainly offers undergraduate programs in Teacher Education, Business Administration, Criminology,
+                Information Technology, and Hotel and Restaurant Management.</p>
+            </h2>
+        </div>
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <ul>
+                <li><a href="Main.html">HOME</a></li>
+                <li><a href="AboutUs.html">ABOUT</a></li>
+                <li><a href="Course.html">COURSES</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+               
+            </ul>
+            <button class="close-btn" onclick="toggleMenu()">EXIT</button>
+        </div>
+        <script>
+            function toggleMenu() {
+    const menu = document.getElementById('hamburgerMenu');
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+        </script>
+</body>
+</html>
